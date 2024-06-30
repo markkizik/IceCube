@@ -33,9 +33,9 @@ body {
 
     padding: 0 24px;
 
-    height: var(--tg-viewport-height);
+    height: var(--tg-viewport-stable-height);
 
-    overflow: auto;
+    overflow: hidden;
 
 
     background: rgb(0, 0, 0);
@@ -44,9 +44,7 @@ body {
     user-select: none;
 }
 
-.container {
-    position: relative;
-}
+
 
 .header__ice-cube {
     display: flex;
@@ -157,8 +155,8 @@ body {
 }
 
 .footer__link.--home {
-    color: white;
-    stroke: white;
+    color: rgb(160, 160, 160);
+    stroke: rgb(160, 160, 160);
 }
 
 .footer__link.--boost {
@@ -173,10 +171,10 @@ body {
 }
 
 .footer__link.--tasks {
-    color: rgb(160, 160, 160);
+    color: white;
 
     & svg {
-        stroke: rgb(160, 160, 160);
+        stroke: white;
         width: 16px;
         height: 16px;
     }
