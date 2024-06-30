@@ -33,9 +33,7 @@ body {
 
     padding: 0 24px;
 
-    height: height: var(--tg-viewport-height);
-    min-height: 100svh;
-    max-height: 100dvh;
+    height: var(--tg-viewport-height);
 
     overflow: auto;
 
