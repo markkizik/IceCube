@@ -11,6 +11,10 @@ a {
     color: rgb(255, 255, 255);
 }
 
+h3 {
+    color: white;
+}
+
 button {
     padding: 0;
     border: none;
@@ -23,22 +27,27 @@ button {
 body {
     position: relative;
     display: flex;
+    align-items: stretch;
+    justify-content: center;
     flex-flow: column;
 
-    overflow: hidden;
+    padding: 0 24px;
 
-    min-width: 100vw;
-    min-height: 100vh;
+    height: 100%;
+    min-height: 100svh;
+    max-height: 100dvh;
 
-    background: rgb(0,0,0);
-    background: linear-gradient(344deg, rgba(0,0,0,1) 0%, rgba(0,0,34,1) 65%, rgba(0,119,143,1) 100%);
+    overflow: auto;
+
+
+    background: rgb(0, 0, 0);
+    background: linear-gradient(344deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 34, 1) 65%, rgba(0, 119, 143, 1) 100%);
+
+    user-select: none;
 }
 
 .container {
     position: relative;
-    max-width: 390px;
-
-    padding: 48px 0;
 }
 
 .header__ice-cube {
@@ -72,9 +81,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     min-width: 100%;
-    min-height: 530px;
+    min-height: 500px;
+
+    /* @media (max-height: 796px) {
+        min-height: 650px;
+    }
+
+    @media (max-height: 896px) {
+        min-height: 650px;
+    }
+
+    @media (max-height: 844px) {
+        min-height: 690px;
+    } */
 }
 
 .ice-cube__main img {
@@ -82,11 +102,36 @@ body {
     height: 220px;
 }
 
+.ice-cube__main img:hover {
+    cursor: pointer;
+}
+
+.ice-cube__main img:active {
+    transform: scale(0.99);
+}
+
+.ice-cube__charge {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 20px;
+
+    width: 100%;
+
+    font-size: 16px;
+
+    & span:last-of-type {
+        font-size: 12px;
+        opacity: 0.8;
+    }
+}
+
 .footer {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-top: 48px;
     width: 100%;
 }
 
@@ -98,6 +143,50 @@ body {
     min-width: 100%;
 }
 
-.footer__home {
+.footer__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 7px;
     padding: 20px;
+
+    & svg {
+        stroke: rgb(160, 160, 160);
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.footer__link.--home {
+    color: white;
+    stroke: white;
+}
+
+.footer__link.--boost {
+    color: rgb(160, 160, 160);
+    & svg {
+        stroke: rgb(160, 160, 160);
+        fill: rgb(160, 160, 160);
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.footer__link.--tasks {
+    color: rgb(160, 160, 160);
+    & svg {
+        stroke: rgb(160, 160, 160);
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.footer__link.--frends {
+    color: rgb(160, 160, 160);
+    & svg {
+        fill: rgb(160, 160, 160);
+        width: 16px;
+        height: 16px;
+    }
 }
