@@ -37,7 +37,7 @@ body {
 
     padding: 0 24px;
 
-    height: 100%;
+    height: height: var(--tg-viewport-height);
     min-height: 100svh;
     max-height: 100dvh;
 
@@ -63,6 +63,7 @@ body {
 
     margin-bottom: 48px;
 
+
     font-family: "Roboto", sans-serif;
 }
 
@@ -81,6 +82,7 @@ h2 {
     font-size: 20px;
     font-weight: 600;
     color: white;
+
 }
 
 .image-ice {
@@ -90,6 +92,7 @@ h2 {
 
 .upgrade {
     width: 100%;
+    min-height: 500px;
     font-family: "Roboto", sans-serif;
 
     & h3 {
@@ -120,7 +123,7 @@ h2 {
 
     padding: 20px;
 
-    box-shadow: 0px 0px 10px 0px rgb(0,0,20);
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 20);
     border-radius: 5px;
     background-color: rgba(2, 2, 99, .4);
 
@@ -145,15 +148,16 @@ h2 {
         }
 
         & h4 {
-           opacity: .7;
-           font-size: 12px;
+            opacity: .7;
+            font-size: 12px;
 
-           & span:first-of-type {
-            margin-right: 10px;
-           }
-           & span:last-of-type {
-            margin-left: 10px;
-           }
+            & span:first-of-type {
+                margin-right: 10px;
+            }
+
+            & span:last-of-type {
+                margin-left: 10px;
+            }
         }
     }
 }
